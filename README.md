@@ -189,13 +189,23 @@ And for the second carbon:
 
 These values are in good agreement with the experimental chemical shift values of 57.4 and 16.4, respectively.
 
-Similarly, for the three methyl carbons of ethanol, we obtain the following chemical shift values: 0.9632, 1.1967, and 1.5351. Taking the average, we get 1.231666667, which is very close to the experimental value of 1.187.
+Similarly, for the three methyl hydrogens of ethanol, we obtain the following chemical shift values: 0.9632, 1.1967, and 1.5351. Taking the average, we get 1.231666667, which is very close to the experimental value of 1.187.
 
-For the two methine carbons of ethanol, we obtain the following chemical shift values: 3.7873 and 3.876. Averaging them, we get 3.83165, which is very close to the experimental value of 3.314.
+For the two methine hydrogens of ethanol, we obtain the following chemical shift values: 3.7873 and 3.876. Averaging them, we get 3.83165, which is very close to the experimental value of 3.314.
 
-By calculating the chemical shift values, we can compare them to experimental values and gain insights into the chemical environment of the molecule.
+**<sup>13</sup>C NMR Chemcial Shifts for Ethanol:**  
+| Calculated Value    | Experimental Value | 
+|----------|-----|
+| 62.9239    | 57.4  |
+| 20.6735   | 16.4  |
 
-These values demonstrate the accuracy and usefulness of NMR calculations in predicting and interpreting NMR spectra for organic molecules.
+**<sup>1</sup>H NMR Chemcial Shifts for Ethanol:**  
+| Calculated Value    | Experimental Value | 
+|----------|-----|
+| 1.231666667    | 1.187  |
+| 3.83165   | 3.314  |
+
+By calculating the chemical shift values, we can compare them to experimental values and gain insights into the chemical environment of the molecule. These values demonstrate the accuracy and usefulness of NMR calculations in predicting and interpreting NMR spectra for organic molecules.
 
 
 
