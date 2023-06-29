@@ -44,6 +44,7 @@ geometry ethanol
    H      -0.9322    -0.7928     0.9464
    H      -1.6672     0.6445     0.1353
    H      -1.1770    -0.7909    -0.8477
+end
 
 basis spherical
 * library 6-311G
@@ -58,7 +59,7 @@ end
 set geometry ethanol
 task dft optimize
 property
-   shielding
+  shielding
 end
 task dft property
 ```
@@ -141,7 +142,7 @@ This command runs NWChem using the `ethanol.nw` input file, directs the standard
 
 **Note:** The `time` command is used to measure the execution time of the NWChem calculation. It is optional but provides information on the runtime.
 
-3. The calculation may take some time depending on the complexity of the system and the computational resources available. In my case, with an Intel® Core™ i7-8565U CPU @ 1.80GHz × 8 processor and 16 GB of RAM, it took approximately 3 minutes and 9 seconds. Please remain patient while the calculation runs.
+3. The calculation may take some time depending on the complexity of the system and the computational resources available. In my case, with an Intel® Core™ i7-8565U CPU @ 1.80GHz × 8 processor and 16 GB of RAM, it took approximately 2 minutes and 56 seconds. Please remain patient while the calculation runs.
 
 4. Once the calculation is complete, check the main directory ("CCO"), which should now contain multiple files. Our main interest is the `ethanol.out` file, which contains the output of the NWChem calculation.
 
