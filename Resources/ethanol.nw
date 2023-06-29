@@ -1,0 +1,33 @@
+start
+
+title "ethanol"
+
+echo
+geometry ethanol
+   O       1.4277    -0.5650    -0.3289
+   C       0.4703     0.4443    -0.1587
+   C      -0.9137    -0.1644     0.0308
+   H       1.6014    -0.9462     0.5713
+   H       0.4633     1.0865    -1.0645
+   H       0.7274     1.0839     0.7160
+   H      -0.9322    -0.7928     0.9464
+   H      -1.6672     0.6445     0.1353
+   H      -1.1770    -0.7909    -0.8477
+end
+
+basis spherical
+* library 6-311G
+end
+
+dft
+direct
+xc pbe0
+noprint "final vectors analysis" multipole
+end
+
+set geometry ethanol
+task dft optimize
+property
+  shielding
+end
+task dft property
