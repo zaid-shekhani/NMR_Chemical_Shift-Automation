@@ -156,7 +156,7 @@ To calculate the <sup>1</sup>H and <sup>13</sup>C NMR chemical shift values for 
 
 Now let's discuss some important points about ethanol's chemical environment. Ethanol's NMR environment refers to the local electronic and magnetic environment surrounding its hydrogen nuclei. It has three different hydrogen environments: the methyl group (-CH3), the methine group (-CH2-), and the hydroxyl group (-OH). The methyl group gives a triplet signal, the methine group gives a quartet signal, and the hydroxyl group gives a broad singlet due to hydrogen bonding. Factors such as solvent, temperature, and pH can affect the observed NMR signals.
 
-![Image](Images/graph.svg)
+![Image1](Images/graph.svg)
 ![Ethanol NMR Spectra](Images/graph(1).svg)
 ![Ethanol NMR Spectra](Images/graph(2).svg)
 
