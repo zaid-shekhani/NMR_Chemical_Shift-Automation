@@ -156,7 +156,9 @@ To calculate the <sup>1</sup>H and <sup>13</sup>C NMR chemical shift values for 
 
 Now let's discuss some important points about ethanol's chemical environment. Ethanol's NMR environment refers to the local electronic and magnetic environment surrounding its hydrogen nuclei. It has three different hydrogen environments: the methyl group (-CH3), the methine group (-CH2-), and the hydroxyl group (-OH). The methyl group gives a triplet signal, the methine group gives a quartet signal, and the hydroxyl group gives a broad singlet due to hydrogen bonding. Factors such as solvent, temperature, and pH can affect the observed NMR signals.
 
-![](images/graph.svg)
+![Image](Images/graph.svg)
+![Ethanol NMR Spectra](Images/graph(1).svg)
+![Ethanol NMR Spectra](Images/graph(2).svg)
 
 In order to calculate the chemical shift values, we need the individual **isotropic** values of each atom from the output file. Open the `tms.out` file and search for the "**Chemical Shielding Tensors (GIAO, in ppm)**" section. In my case, this section starts at line 3394. Scroll down a bit, and at line 3468, you'll find "**Atom:    2  C**" which is of interest to us. The calculated isotropic value for this carbon is **195.4494** (check line 3484). Similarly, for the hydrogen of TMS, the isotropic value we obtain is **32.7715**. You will notice that all the other hydrogens and carbons have similar isotropic values. This is because all the carbons and hydrogens in TMS are in the same chemical environment, making it an ideal reference compound.
 
@@ -192,8 +194,6 @@ Similarly, for the three methyl carbons of ethanol, we obtain the following chem
 For the two methine carbons of ethanol, we obtain the following chemical shift values: 3.7873 and 3.876. Averaging them, we get 3.83165, which is very close to the experimental value of 3.314.
 
 By calculating the chemical shift values, we can compare them to experimental values and gain insights into the chemical environment of the molecule.
-
-![Ethanol NMR Spectra](./images/ethanol_nmr_spectra.png)
 
 These values demonstrate the accuracy and usefulness of NMR calculations in predicting and interpreting NMR spectra for organic molecules.
 
