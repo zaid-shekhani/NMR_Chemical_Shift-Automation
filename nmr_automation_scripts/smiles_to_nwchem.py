@@ -19,7 +19,7 @@ def generate_3d_coordinates(smiles, output_file):
             x, y, z = position.x, position.y, position.z
             line = "   {:<2s} {:>10.4f} {:>10.4f} {:>10.4f}\n".format(atom.GetSymbol(), x, y, z)
             f.write(line)
-
+        f.write("end\n\n")
         f.write("\nbasis spherical\n")
         f.write("* library 6-311G\n")
         f.write("end\n\n")
