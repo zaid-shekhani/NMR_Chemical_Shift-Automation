@@ -80,7 +80,7 @@ task dft property
 
 ## Generating NWChem Input File from SMILES
 
-To make things easier, I have created a Python script that generates the NWChem input file by providing the SMILES representation of the molecule. You can find the Python Script (`smiles_to_nwchem.py`) in this repository's `nmr_automation_scripts` folder.
+To make things easier, I have created a Python script that generates the NWChem input file by providing the SMILES representation of the molecule. You can find the Python Script (`smiles_to_nwchem.py`) in this repository's [nmr_automation_scripts](./nmr_automation_scripts) folder.
 
 ### Prerequisites
 
@@ -105,7 +105,7 @@ To use the Python script and convert the SMILES representation to an NWChem inpu
 
 1. Create a new folder, let's name it 'CCO', where you will save the generated input files.
 
-2. Save the Python script `smiles_to_nwchem.py`, which you can find in this repository's nmr_automation_scripts folder, in the 'CCO' folder.
+2. Save the Python script `smiles_to_nwchem.py`, which you can find in this repository's [nmr_automation_scripts](./nmr_automation_scripts) folder, in the 'CCO' folder.
 
 3. Open the terminal and navigate to the 'CCO' folder directory.
 
@@ -182,7 +182,7 @@ Thus, the chemical shift for the first carbon of ethanol is:
    ```
    Chemical shift = 195.4494 - 132.5255 = 62.9239
    ```
-And for the second carbon:
+And for the second carbon:You can find the chemical shift results saved in the result.txt file in your working directory.
    ```
    Chemical shift = 195.4494 - 174.7759 = 20.6735
    ```
@@ -207,5 +207,41 @@ For the two methine hydrogens of ethanol, we obtain the following chemical shift
 
 By calculating the chemical shift values, we can compare them to experimental values and gain insights into the chemical environment of the molecule. These values demonstrate the accuracy and usefulness of NMR calculations in predicting and interpreting NMR spectra for organic molecules.
 
+## Automation
 
+I have developed few Python and shell scripts(which you can find in this repository's [nmr_automation_scripts](./nmr_automation_scripts) folder) to automate the manual processes involved in calculating NMR chemical shift values. With these automation scripts, you can now obtain chemical shifts with just a line of code providing the SMILES representation of the molecule. This automation significantly reduces the manual work required compared to the ISiCLE version.
 
+### Scripts Overview
+
+1. **auto1.py**: This Python script converts SMILES notation to NWChem input files. It takes the SMILES representation of the molecule as input and generates the corresponding NWChem input file (with a `.nw` extension).
+
+2. **auto2.py**: This Python script extracts and calculates chemical shifts from NWChem output files. It reads the NWChem output file and calculates the chemical shift values for each atom type in the molecule.
+
+3. **run_scripts.sh**: This shell script integrates the two Python scripts, `auto1.py` and `auto2.py`, into a seamless automation process. By running this shell script with the appropriate arguments, you can automate the entire calculation of NMR chemical shifts.
+
+### Automation Steps
+
+Before running the automation, ensure you have completed the prerequisites mentioned in the [Prerequisites](#prerequisites) section.
+
+1. Activate the `rdkit-env` environment by running the following command in your terminal:
+   ```
+   conda activate rdkit-env
+   ```
+2. Make the shell script executable by running the following command in your terminal:
+   ```
+   chmod +x run_scripts.sh
+   ```
+3. Now, you can run the shell script with the desired SMILES representation to obtain NMR chemical shifts. For example, to calculate chemical shifts for the molecule with SMILES "CCO," execute the following command:
+   ```
+   ./run_scripts.sh "CCO"
+   ```
+
+By following these steps, the automation will convert the SMILES to the NWChem input file and perform the necessary calculations to obtain the chemical shift values. The results will be displayed in the terminal.
+
+![Image2](Images/Screenshot.png)
+
+You can find the chemical shift results saved in the result.txt file in your working directory.
+
+**Note:** Make sure to replace "CCO" with the appropriate SMILES representation for the molecule you want to calculate the chemical shifts for.
+
+Feel free to use these automation scripts to expedite your NMR chemical shift calculations and streamline the process.
