@@ -240,7 +240,7 @@ By following these steps, the automation will convert the SMILES to the NWChem i
 
 ![Image2](Images/Screenshot.png)
 
-You can find the chemical shift results saved in the result.txt file in your working directory.
+You can find the chemical shift results saved in the **result.txt** file in your working directory.
 
 **Note:** Make sure to replace "CCO" with the appropriate SMILES representation for the molecule you want to calculate the chemical shifts for.
 
