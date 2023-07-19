@@ -64,8 +64,7 @@ end
 task dft property
 ```
 
-## Explanation:
-
+**Explanation:**
 ### A. Preamble
 
 
@@ -152,7 +151,6 @@ In summary, this NWChem input file defines the molecular geometry of ethanol, se
 User
 
 
-
 ## Generating NWChem Input File from SMILES
 
 To make things easier, I have created a Python script that generates the NWChem input file by providing the SMILES representation of the molecule. You can find the Python Script (`smiles_to_nwchem.py`) in this repository's [nmr_automation_scripts](./nmr_automation_scripts) folder.
@@ -231,9 +229,9 @@ To calculate the <sup>1</sup>H and <sup>13</sup>C NMR chemical shift values for 
 
 Now let's discuss some important points about ethanol's chemical environment. Ethanol's NMR environment refers to the local electronic and magnetic environment surrounding its hydrogen nuclei. It has three different hydrogen environments: the methyl group (-CH3), the methine group (-CH2-), and the hydroxyl group (-OH). The methyl group gives a triplet signal, the methine group gives a quartet signal, and the hydroxyl group gives a broad singlet due to hydrogen bonding. Factors such as solvent, temperature, and pH can affect the observed NMR signals.
 
-![Image1](Images/graph.svg)
-![Ethanol NMR Spectra](Images/graph(1).svg)
-![Ethanol NMR Spectra](Images/graph(2).svg)
+<img src="https://github.com/zaid-shekhani/NMR_Chemical_Shift-Automation/blob/main/Resources/Images/1.png">
+<img src="https://github.com/zaid-shekhani/NMR_Chemical_Shift-Automation/blob/main/Resources/Images/2.png">
+<img src="https://github.com/zaid-shekhani/NMR_Chemical_Shift-Automation/blob/main/Resources/Images/3.png">
 
 In order to calculate the chemical shift values, we need the individual **isotropic** values of each atom from the output file. Open the `tms.out` file and search for the "**Chemical Shielding Tensors (GIAO, in ppm)**" section. In my case, this section starts at line 3394. Scroll down a bit, and at line 3468, you'll find "**Atom:    2  C**" which is of interest to us. The calculated isotropic value for this carbon is **195.4494** (check line 3484). Similarly, for the hydrogen of TMS, the isotropic value we obtain is **32.7715**. You will notice that all the other hydrogens and carbons have similar isotropic values. This is because all the carbons and hydrogens in TMS are in the same chemical environment, making it an ideal reference compound.
 
@@ -310,10 +308,10 @@ Before running the automation, ensure you have completed the prerequisites menti
    ```
    ./run_scripts.sh "CCO"
    ```
+<img src="https://github.com/zaid-shekhani/NMR_Chemical_Shift-Automation/blob/main/Resources/Images/4.png">
 
 By following these steps, the automation will convert the SMILES to the NWChem input file and perform the necessary calculations to obtain the chemical shift values. The results will be displayed in the terminal.
 
-![Image2](Images/Screenshot.png)
 
 You can find the chemical shift results saved in the **result.txt** file in your working directory.
 
