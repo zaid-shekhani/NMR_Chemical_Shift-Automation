@@ -64,7 +64,7 @@ end
 task dft property
 ```
 
-**Explanation:**
+## Explanation:
 
 - The `start` keyword marks the beginning of the input file.
 - The `title` keyword specifies a title for the calculation.
@@ -77,6 +77,93 @@ task dft property
 - The `task dft optimize` line instructs NWChem to perform a DFT optimization of the molecular structure.
 - The `property` section specifies the property calculation to be performed, which is the calculation of NMR shielding tensors in this case.
 - The final `task dft property` line instructs NWChem to perform the property calculation.
+
+### A. Preamble
+
+
+```none
+start
+
+title "ethanol"
+
+echo
+```
+
+The `start` statement indicates the beginning of the input file's execution. It is used to initialize the NWChem job and set the stage for defining the various sections that follow.
+
+The `title` statement is used to provide a descriptive title or label for the NWChem job. In this case, the title is set to "ethanol," indicating that the job involves calculations related to the molecule ethanol.
+
+The `echo` section allows users to review and verify the input parameters used in the calculation, which can be helpful for debugging or documentation purposes.
+
+### B. Molecular Geometry
+
+```none
+geometry ethanol
+   O       1.4277    -0.5650    -0.3289
+   C       0.4703     0.4443    -0.1587
+   C      -0.9137    -0.1644     0.0308
+   H       1.6014    -0.9462     0.5713
+   H       0.4633     1.0865    -1.0645
+   H       0.7274     1.0839     0.7160
+   H      -0.9322    -0.7928     0.9464
+   H      -1.6672     0.6445     0.1353
+   H      -1.1770    -0.7909    -0.8477
+end
+```
+
+This section defines the molecular geometry of the system under study. It specifies the atomic symbols (Oxygen, Carbon, Hydrogen) along with their respective Cartesian coordinates. The molecule described here is ethanol, with its atoms placed in 3D space.
+
+### C. Basis Set
+
+
+```none
+basis spherical
+* library 6-311G
+end
+```
+
+This section sets the basis set used for the electronic structure calculations. A basis set is a set of mathematical functions used to describe how electrons are distributed around atoms in molecules. It helps approximate the complex behavior of electrons during computational chemistry calculations. The `6-311G` basis set is specified here, and the `spherical` keyword indicates that the basis functions are spherically symmetric.
+
+### D. Density Functional Theory (DFT)
+
+```none
+dft
+direct
+xc pbe0
+noprint "final vectors analysis" multipole
+end
+```
+
+In this section, the Density Functional Theory (DFT) settings for the calculation are specified. DFT is a quantum mechanical method used to study electronic properties of molecules. It is used to study the electronic structure and properties of molecules and materials. It focuses on the electron density, representing the probability of finding electrons at specific locations around atomic nuclei. By analyzing electron distribution, DFT enables us to predict molecular properties, optimize geometries, and investigate chemical processes with a good balance between accuracy and computational efficiency. The keywords used here are as follows:
+
+- `direct`: This keyword tells NWChem to use a direct SCF (Self-Consistent Field) algorithm to optimize the molecular geometry and calculate properties.
+- `xc pbe0`: The exchange-correlation functional to be used is specified as pbe0. PBE0 is a hybrid functional that combines the Perdew-Burke-Ernzerhof (PBE) exchange functional with a portion of Hartree-Fock exchange.
+- `noprint "final vectors analysis" multipole`: These keywords suppress printing of the final vectors analysis and multipole expansion results during the calculation.
+
+### E. Geometry Optimization Task
+
+```none
+set geometry ethanol
+task dft optimize
+```
+
+This section sets the geometry for the current calculation to the previously defined ethanol geometry. The task specified here is to perform a geometry optimization using DFT (`task dft optimize`). The optimization will find the molecular geometry that corresponds to the minimum energy on the potential energy surface.
+
+### F. Property Calculation
+
+```none
+property
+  shielding
+end
+task dft property
+```
+
+In this section, a property calculation is performed. The keyword `property` specifies that the properties of the system are to be calculated. The specific property calculated here is the nuclear magnetic shielding tensor (shielding) for each nucleus in the molecule. The shielding tensor provides information about the local electronic environment around each nucleus. The `task dft property` command executes the property calculation.
+
+In summary, this NWChem input file defines the molecular geometry of ethanol, sets up the basis set and DFT settings, performs a geometry optimization, and calculates the nuclear magnetic shielding tensor as a property of the optimized ethanol molecule using the PBE0 exchange-correlation functional.
+User
+
+
 
 ## Generating NWChem Input File from SMILES
 
