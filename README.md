@@ -64,7 +64,7 @@ end
 task dft property
 ```
 
-**Explanation:**
+## Explanation:
 ### A. Preamble
 
 
