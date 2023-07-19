@@ -66,18 +66,6 @@ task dft property
 
 ## Explanation:
 
-- The `start` keyword marks the beginning of the input file.
-- The `title` keyword specifies a title for the calculation.
-- The `echo` keyword enables the printing of input sections and commands to the output file.
-- The `geometry` section defines the molecular geometry of the ethanol molecule in Cartesian coordinates.
-- The `basis` section specifies the basis set to be used, which is the 6-311G basis set in this case.
-- The `dft` section sets up the DFT calculation using the PBE0 exchange-correlation functional and enables direct calculation methods.
-- The `noprint` keyword suppresses printing of the final vectors analysis and multipole moments.
-- The `set` keyword sets the geometry to the previously defined ethanol geometry.
-- The `task dft optimize` line instructs NWChem to perform a DFT optimization of the molecular structure.
-- The `property` section specifies the property calculation to be performed, which is the calculation of NMR shielding tensors in this case.
-- The final `task dft property` line instructs NWChem to perform the property calculation.
-
 ### A. Preamble
 
 
