@@ -1,12 +1,14 @@
-# NWChem Tutorial: Calculating NMR Chemical Shift Values
+# Automating NMR Chemical Shift Calculations
 
 ## Overview
-Welcome to the NWChem Tutorial for calculating Nuclear Magnetic Resonance (NMR) chemical shift values! In this tutorial, I will explore how NWChem, a powerful computational chemistry software suite, can be utilized to calculate NMR chemical shifts of chemical compounds.
+Welcome to the tutorial on automating NMR Chemical shift calculations! In this guide, we will explore how to utilize NWChem, a powerful computational chemistry software suite, to automate the calculation of NMR chemical shifts for various chemical compounds.
 
 ## Introduction
-Nuclear Magnetic Resonance (NMR) spectroscopy is a valuable technique for chemical identification in complex unknown samples. Traditionally, researchers rely on databases containing chemical shift spectra to match experimental NMR data with known compounds. However, building comprehensive libraries of authentic standards experimentally can be challenging and time-consuming.
+Nuclear Magnetic Resonance (NMR) spectroscopy is a crucial technique for identifying chemical compounds in complex and unknown samples. Traditionally, researchers heavily rely on databases containing chemical shift spectra to match experimental NMR data with known compounds. However, the process of building comprehensive libraries of authentic standards experimentally can be both challenging and time-consuming.
 
-To overcome these limitations, computational chemistry approaches offer a practical solution. By utilizing NWChem, a widely-used software suite for quantum chemistry calculations, we can perform in silico calculations to determine molecular attributes such as NMR chemical shifts. This enables us to expand reference libraries and enhance compound identification.
+To address these challenges and streamline the compound identification process, computational chemistry offers a practical solution. By leveraging NWChem, a widely-used software suite for quantum chemistry calculations, we can perform in silico calculations to determine essential molecular attributes, including NMR chemical shifts. This automated approach empowers us to expand reference libraries efficiently and enhance compound identification accuracy.
+
+In this tutorial, I will guide you through the process of setting up NWChem calculations for NMR chemical shifts, interpreting the results, and integrating them into a workflow for automating the determination of NMR Chemical shifts for diverse chemical structures. By the end of this tutorial, you will have gained valuable insights into automating NMR shift calculations using NWChem, providing you with a powerful tool to advance your research in NMR spectroscopy and compound characterization.
 
 ## Installation
 The following tutorial provides instructions for installing NWChem on Linux. If you are using a different operating system, such as Windows or macOS, please visit the [NWChem website](https://nwchemgit.github.io/Download.html#nwchem-availability-in-linux-distributions) for specific instructions tailored to your OS.
